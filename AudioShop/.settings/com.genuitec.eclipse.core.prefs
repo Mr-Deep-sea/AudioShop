@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+validator.Checked=src/conf/main-struts.xml,config/struts.xml,conf/struts.xml
+validator.Unchecked=
