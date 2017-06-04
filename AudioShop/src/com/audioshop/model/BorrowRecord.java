@@ -7,7 +7,7 @@ private String id;
 private String userId;
 private String audioIds;
 private String numbers;
-private Date date;
+private Date borrowDate;
 public String getId() {
 	return id;
 }
@@ -32,11 +32,12 @@ public String getNumbers() {
 public void setNumbers(String numbers) {
 	this.numbers = numbers;
 }
-public Date getDate() {
-	return date;
+public Date getBorrowDate() {
+	return borrowDate;
 }
-public void setDate(Date date) {
-	this.date = date;
+public void setBorrowDate(Date borrowDate) {
+	this.borrowDate = borrowDate;
 }
+
 
 }
