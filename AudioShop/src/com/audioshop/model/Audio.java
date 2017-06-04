@@ -3,9 +3,13 @@ package com.audioshop.model;
 public class Audio {
 private String id;
 private String name;
+//类型
 private String categoryId;
-private String character;
+//其他项
+private String otherItem;
+//库存量
 private int stock;
+//预约数量
 private int reservation;
 public String getId() {
 	return id;
@@ -25,11 +29,11 @@ public String getCategoryId() {
 public void setCategoryId(String categoryId) {
 	this.categoryId = categoryId;
 }
-public String getCharacter() {
-	return character;
+public String getOtherItem() {
+	return otherItem;
 }
-public void setCharacter(String character) {
-	this.character = character;
+public void setOtherItem(String otherItem) {
+	this.otherItem = otherItem;
 }
 public int getStock() {
 	return stock;
@@ -43,5 +47,5 @@ public int getReservation() {
 public void setReservation(int reservation) {
 	this.reservation = reservation;
 }
- 
+
 }

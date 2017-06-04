@@ -5,7 +5,15 @@ private String id;
 private String name;
 private String phone;
 private String password;
+private int author;
 
+
+public int getAuthor() {
+	return author;
+}
+public void setAuthor(int author) {
+	this.author = author;
+}
 public String getId() {
 	return id;
 }
