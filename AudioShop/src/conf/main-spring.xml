@@ -20,7 +20,7 @@
     <bean id="categoryDao" class="com.audioshop.dao.impl.CategoryDaoImpl">
     	<property name="sessionFactory" ref="sessionFactory"></property>
     </bean>
-    <bean id="orderDao" class="com.audioshop.dao.impl.OrderDaoImpl">
+    <bean id="orderDao" class="com.audioshop.dao.impl.orderDaoImpl">
     	<property name="sessionFactory" ref="sessionFactory"></property>
     </bean>
     <bean id="reservationRecordDao" class="com.audioshop.dao.impl.ReservationRecordDaoImpl">
