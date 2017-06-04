@@ -6,11 +6,12 @@ import org.springframework.stereotype.Service;
 
 import com.audioshop.dao.AudioDao;
 import com.audioshop.model.Audio;
-import com.audioshop.service.AudioService;
+import com.audioshop.service.ReturnService;
 
-@Service("audioService")
-public class AudioServiceImpl extends BaseServiceImpl<Audio> implements
-		AudioService {
+@Service("returnService")
+public class ReturnServiceImpl extends BaseServiceImpl<Audio> implements
+		ReturnService {
+
 	private AudioDao audioDao;
 
 	@Resource

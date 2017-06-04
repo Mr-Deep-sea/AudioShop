@@ -11,6 +11,21 @@
     <bean id="userDao" class="com.audioshop.dao.impl.UserDaoImpl">
     	<property name="sessionFactory" ref="sessionFactory"></property>
     </bean>
+    <bean id="audioDao" class="com.audioshop.dao.impl.AudioDaoImpl">
+    	<property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean id="borrowRecordDao" class="com.audioshop.dao.impl.BorrowRecordDaoImpl">
+    	<property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean id="categoryDao" class="com.audioshop.dao.impl.CategoryDaoImpl">
+    	<property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean id="orderDao" class="com.audioshop.dao.impl.orderDaoImpl">
+    	<property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean id="reservationRecordDao" class="com.audioshop.dao.impl.ReservationRecordDaoImpl">
+    	<property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
     <bean id="loginAction" class="com.audioshop.action.LoginAction">
     </bean>
     <!--  <bean id="userLoginData" class="model.UserLoginData"></bean>
