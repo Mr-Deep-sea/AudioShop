@@ -23,6 +23,7 @@
 		<mapping resource="com/audioshop/model/Category.hbm.xml" />
 		<mapping resource="com/audioshop/model/Order.hbm.xml" />
 		<mapping resource="com/audioshop/model/ReservationRecord.hbm.xml" />
+		
 	</session-factory>
 
 </hibernate-configuration>
