@@ -19,5 +19,12 @@
 		<!-- <result name="registPage">/WEB-INF/jsp/regist.jsp</result> -->
 			
 		</action>
+		<action name="to_*" class="com.audioshop.action.Distribute" method="{1}">
+		<result name="addvip">/WEB-INF/worker/addVip.jsp</result>
+		<result name="login">/login.jsp</result>
+		<!-- <result name="registPage">/WEB-INF/jsp/regist.jsp</result> -->
+			
+		</action>
 	</package>
+	
 </struts>
