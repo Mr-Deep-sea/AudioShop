@@ -6,3 +6,4 @@ AudioShop/WebRoot/WEB-INF/classes/errorCode.properties
 AudioShop/WebRoot/WEB-INF/classes/db.properties
 AudioShop/WebRoot/WEB-INF/classes/log4j.properties
 AudioShop/WebRoot/WEB-INF/classes/struts.xml
+AudioShop/WebRoot/WEB-INF/classes/hibernate.cfg.xml
