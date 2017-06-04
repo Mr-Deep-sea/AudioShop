@@ -1,0 +1,8 @@
+AudioShop/.classpath
+AudioShop/.project
+AudioShop/.settings/com.genuitec.eclipse.migration.prefs
+AudioShop/.settings/org.eclipse.wst.common.project.facet.core.prefs.xml
+AudioShop/WebRoot/WEB-INF/classes/errorCode.properties
+AudioShop/WebRoot/WEB-INF/classes/db.properties
+AudioShop/WebRoot/WEB-INF/classes/log4j.properties
+AudioShop/WebRoot/WEB-INF/classes/struts.xml
