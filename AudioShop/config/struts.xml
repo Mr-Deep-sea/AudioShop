@@ -12,14 +12,13 @@
 	<constant name="struts.action.extention" value="action" />
 	<!-- 把主题配置成simple -->
 	<constant name="struts.ui.theme" value="simple" />
-	
+
+
 	<!-- 配置全局结果及异常映射 -->
 	<package name="base-default" extends="struts-default">
 		<!-- 返回结果类型 -->
-		<!-- <result-types>
-			<result-type name="error" class="action.SysResultAction"></result-type>
-		</result-types> -->
-		
+		<!-- <result-types> <result-type name="error" class="action.SysResultAction"></result-type> 
+			</result-types> -->
 		
 		<!-- 全局异常映射 -->
 		<global-exception-mappings>
@@ -27,10 +26,11 @@
 			<exception-mapping result="input" exception="java.lang.Exception"></exception-mapping>
 		</global-exception-mappings>
 	</package>
-	
+
 	<!-- 包含test的struts配置文件 -->
-	<!--  <include file="test/conf/test-struts.xml"></include> -->
-	 <include file="conf/main-struts.xml"></include>
- 
+	<!-- <include file="test/conf/test-struts.xml"></include> -->
+	<include file="conf/main-struts.xml"></include>
+	<include file="conf/admin-struts.xml"></include>
+	<include file="conf/worker-struts.xml"></include>
 
 </struts>

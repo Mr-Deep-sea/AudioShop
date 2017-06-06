@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.devMode" value="false" />
+
+	<package name="worker" extends="struts-default" namespace="/">
+		<!-- 配置自定义拦截器 -->
+		<interceptors>
+			<interceptor name="workerPrivilegeInterceptor"
+				class="com.audioshop.interceptor.WorkerPrivilegeInterceptor" />
+		</interceptors>
+		<global-results>
+			<!-- <result name="msg">/WEB-INF/jsp/msg.jsp</result>
+			<result name="login">/login.jsp</result>
+			<result name="loginFail">/workerLogin.jsp</result> -->
+			<result name="workerLogin">/workerLogin.jsp</result>
+		</global-results>	
+		<!-- 后台登录Action -->
+		<action name="worker_*" class="workerAction" method="{1}">
+			<!-- <result name="loginFail">/admin/index.jsp</result>
+			<result name="loginSuccess" type="redirect">/admin/home.jsp</result> -->
+			<interceptor-ref name="workerPrivilegeInterceptor">
+				<param name="excludeMethods">login</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+	</package>
+</struts>

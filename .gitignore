@@ -9,3 +9,5 @@ AudioShop/WebRoot/WEB-INF/classes/struts.xml
 AudioShop/WebRoot/WEB-INF/classes/hibernate.cfg.xml
 AudioShop/WebRoot/WEB-INF/classes/hibernate.cfg.xml
 AudioShop/WebRoot/WEB-INF/classes/
+AudioShop/.settings/com.genuitec.eclipse.core.prefs
+AudioShop/WebRoot/WEB-INF/classes/hibernate.cfg.xml

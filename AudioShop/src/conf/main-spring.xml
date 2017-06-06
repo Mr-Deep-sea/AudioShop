@@ -28,6 +28,11 @@
     </bean>
     <bean id="loginAction" class="com.audioshop.action.LoginAction">
     </bean>
+    <bean id="adminAction" class="com.audioshop.action.AdminAction">
+    </bean>
+    <bean id="workerAction" class="com.audioshop.action.WorkerAction">
+    </bean>
+    
     <!--  <bean id="userLoginData" class="model.UserLoginData"></bean>
     <bean id="commonReturnData" class="model.CommonReturnData"></bean> -->
      <!-- 扫描service -->
