@@ -1,6 +1,9 @@
 package com.audioshop.model;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * 
  * @author yangy
@@ -8,11 +11,8 @@ import java.util.Date;
  */
 public class ReservationRecord {
 private String id;
-private String userId;
-//预约的资料Ids
-private String audioIds;
-//预约资料的数量以下标对应
-private String numbers;
+private User user;
+private Set<ReservationRecordItem> reservationRecordItems= new HashSet<ReservationRecordItem>();;
 private Date date;
 public String getId() {
 	return id;
@@ -20,23 +20,19 @@ public String getId() {
 public void setId(String id) {
 	this.id = id;
 }
-public String getUserId() {
-	return userId;
+
+public User getUser() {
+	return user;
 }
-public void setUserId(String userId) {
-	this.userId = userId;
+public void setUser(User user) {
+	this.user = user;
 }
-public String getAudioIds() {
-	return audioIds;
+public Set<ReservationRecordItem> getReservationRecordItems() {
+	return reservationRecordItems;
 }
-public void setAudioIds(String audioIds) {
-	this.audioIds = audioIds;
-}
-public String getNumbers() {
-	return numbers;
-}
-public void setNumbers(String numbers) {
-	this.numbers = numbers;
+public void setReservationRecordItems(
+		Set<ReservationRecordItem> reservationRecordItems) {
+	this.reservationRecordItems = reservationRecordItems;
 }
 public Date getDate() {
 	return date;

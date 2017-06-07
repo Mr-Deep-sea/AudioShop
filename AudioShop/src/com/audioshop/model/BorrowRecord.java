@@ -1,12 +1,13 @@
 package com.audioshop.model;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 public class BorrowRecord {
 private String id;
-private String userId;
-private String audioIds;
-private String numbers;
+private User user;
+private Set<BorrowRecordItem> borrowRecordItems=new HashSet<BorrowRecordItem>();
 private Date borrowDate;
 public String getId() {
 	return id;
@@ -14,23 +15,17 @@ public String getId() {
 public void setId(String id) {
 	this.id = id;
 }
-public String getUserId() {
-	return userId;
+public User getUser() {
+	return user;
 }
-public void setUserId(String userId) {
-	this.userId = userId;
+public void setUser(User user) {
+	this.user = user;
 }
-public String getAudioIds() {
-	return audioIds;
+public Set<BorrowRecordItem> getBorrowRecordItems() {
+	return borrowRecordItems;
 }
-public void setAudioIds(String audioIds) {
-	this.audioIds = audioIds;
-}
-public String getNumbers() {
-	return numbers;
-}
-public void setNumbers(String numbers) {
-	this.numbers = numbers;
+public void setBorrowRecordItems(Set<BorrowRecordItem> borrowRecordItems) {
+	this.borrowRecordItems = borrowRecordItems;
 }
 public Date getBorrowDate() {
 	return borrowDate;
@@ -38,6 +33,7 @@ public Date getBorrowDate() {
 public void setBorrowDate(Date borrowDate) {
 	this.borrowDate = borrowDate;
 }
+
 
 
 }

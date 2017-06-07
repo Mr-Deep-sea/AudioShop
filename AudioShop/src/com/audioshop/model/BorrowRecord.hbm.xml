@@ -6,20 +6,16 @@
 -->
 <hibernate-mapping>
     <class name="com.audioshop.model.BorrowRecord" table="tb_borrowrecord" catalog="audioshop">
-        <id name="id" type="java.lang.String">
-            <column name="id" length="32" />
-            <generator class="assigned" />
+        <id name="id" type="java.lang.String" >
+            <column name="id" length="36" />
+            <generator class="uuid" />
         </id>
-        <property name="userId" type="java.lang.String">
-            <column name="userId" length="32" />
-        </property>
-        <property name="audioIds" type="java.lang.String">
-            <column name="audioIds" length="255"/>
-        </property>
-        <property name="numbers" type="java.lang.String">
-            <column name="numbers" length="255" />
-        </property>
-         <property name="borrowDate">
+        <many-to-one name="user" lazy="false" class="com.audioshop.model.User" column="userId"/>
+      	<set name="borrowRecordItems" lazy="false" cascade="save-update">
+			<key column="borrowrecord_id"/>
+			<one-to-many class="com.audioshop.model.BorrowRecordItem"/>
+		</set>
+         <property name="borrowDate" type="java.util.Date">
             <column name="borrowDate"/>
         </property>
     </class>

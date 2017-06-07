@@ -10,17 +10,13 @@
             <column name="id" length="32" />
             <generator class="assigned" />
         </id>
-        <property name="userId" type="java.lang.String">
-            <column name="userId" length="32" />
-        </property>
-        <property name="audioIds" type="java.lang.String">
-            <column name="audioIds" length="255"/>
-        </property>
-        <property name="numbers" type="java.lang.String">
-            <column name="numbers" length="255" />
-        </property>
+        <many-to-one name="user" lazy="false" class="com.audioshop.model.User" column="user_id"/>
+        <set name="reservationRecordItems" lazy="false" cascade="save-update">
+			<key column="id"/>
+			<one-to-many class="com.audioshop.model.ReservationRecordItem"/>
+		</set>
         <property name="date" type="java.util.Date">
-            <column name="reservationDate" length="0" />
+            <column name="reservationDate" />
         </property>
     </class>
 </hibernate-mapping>

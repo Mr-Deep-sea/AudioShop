@@ -32,5 +32,6 @@
 	<include file="conf/main-struts.xml"></include>
 	<include file="conf/admin-struts.xml"></include>
 	<include file="conf/worker-struts.xml"></include>
+	<include file="conf/test-struts.xml"></include>
 
 </struts>

@@ -20,10 +20,11 @@
 		<mapping resource="com/audioshop/model/User.hbm.xml" />
 		<mapping resource="com/audioshop/model/Audio.hbm.xml" />
 		<mapping resource="com/audioshop/model/BorrowRecord.hbm.xml" />
+		<mapping resource="com/audioshop/model/BorrowRecordItem.hbm.xml" />
 		<mapping resource="com/audioshop/model/Category.hbm.xml" />
 		<mapping resource="com/audioshop/model/Order.hbm.xml" />
 		<mapping resource="com/audioshop/model/ReservationRecord.hbm.xml" />
-		
+		<mapping resource="com/audioshop/model/ReservationRecordItem.hbm.xml" />
 	</session-factory>
 
 </hibernate-configuration>

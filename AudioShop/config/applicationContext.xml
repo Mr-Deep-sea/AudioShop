@@ -81,4 +81,5 @@
    
   <!--  <import resource="classpath:test/conf/*-spring.xml"/> -->
    <import resource="classpath:conf/main-spring.xml"/>
+    <import resource="classpath:conf/test-spring.xml"/>
 </beans>

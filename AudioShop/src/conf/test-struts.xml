@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.devMode" value="false" />
+
+	<package name="test" extends="struts-default,json-default" namespace="/">	
+		<!-- 后台登录Action -->
+		<action name="testBorrowRecord_*" class="testBorrowRecordAction" method="{1}">
+			<result name="success" type="json">
+				<param name="root">borrowRecords</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="noCache">true</param>
+				<param name="charSet">UTF-8</param>
+			</result>
+		</action>
+		<!-- 后台登录Action -->
+		<action name="testReservationRecord_*" class="com.audioshop.test.action.ReservationRecordActionTest" method="{1}">
+			<result name="success" type="json">
+				<param name="root">reservationRecords</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="noCache">true</param>
+				<param name="charSet">UTF-8</param>
+			</result>
+		</action>
+	</package>
+</struts>
