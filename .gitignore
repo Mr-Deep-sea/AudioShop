@@ -1,5 +1,7 @@
 AudioShop/.classpath
 AudioShop/.project
+AudioShop/.settings/
+AudioShop/WebRoot/WEB-INF/classes/
 AudioShop/.settings/com.genuitec.eclipse.migration.prefs
 AudioShop/.settings/org.eclipse.wst.common.project.facet.core.prefs.xml
 AudioShop/WebRoot/WEB-INF/classes/errorCode.properties
@@ -8,6 +10,5 @@ AudioShop/WebRoot/WEB-INF/classes/log4j.properties
 AudioShop/WebRoot/WEB-INF/classes/struts.xml
 AudioShop/WebRoot/WEB-INF/classes/hibernate.cfg.xml
 AudioShop/WebRoot/WEB-INF/classes/hibernate.cfg.xml
-AudioShop/WebRoot/WEB-INF/classes/
 AudioShop/.settings/com.genuitec.eclipse.core.prefs
 AudioShop/WebRoot/WEB-INF/classes/hibernate.cfg.xml

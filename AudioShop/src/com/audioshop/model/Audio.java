@@ -4,11 +4,11 @@ public class Audio {
 private String id;
 private String name;
 //类型
-private String categoryId;
+private Category category;
 //其他项
 private String otherItem;
 //库存量
-private int stock;
+private Integer stock;
 //预约数量
 private int reservation;
 public String getId() {
@@ -23,11 +23,12 @@ public String getName() {
 public void setName(String name) {
 	this.name = name;
 }
-public String getCategoryId() {
-	return categoryId;
+
+public Category getCategory() {
+	return category;
 }
-public void setCategoryId(String categoryId) {
-	this.categoryId = categoryId;
+public void setCategory(Category category) {
+	this.category = category;
 }
 public String getOtherItem() {
 	return otherItem;
@@ -35,10 +36,11 @@ public String getOtherItem() {
 public void setOtherItem(String otherItem) {
 	this.otherItem = otherItem;
 }
-public int getStock() {
+
+public Integer getStock() {
 	return stock;
 }
-public void setStock(int stock) {
+public void setStock(Integer stock) {
 	this.stock = stock;
 }
 public int getReservation() {

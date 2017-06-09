@@ -7,15 +7,16 @@
 <hibernate-mapping>
     <class name="com.audioshop.model.Audio" table="tb_audio" catalog="audioshop">
         <id name="id" type="java.lang.String">
-            <column name="id" length="32" />
-            <generator class="assigned" />
+            <column name="id" length="36" />
+            <generator class="uuid" />
         </id>
         <property name="name" type="java.lang.String">
-            <column name="name" length="16" />
+            <column name="name" length="255" />
         </property>
-        <property name="categoryId" type="java.lang.String">
+        <many-to-one name="category" lazy="false" class="com.audioshop.model.Category" column="categoryId" />
+       <!--  <property name="categoryId" type="java.lang.String">
             <column name="categoryId" length="32"/>
-        </property>
+        </property> -->
         <property name="otherItem" type="java.lang.String">
             <column name="otherItem" length="255" />
         </property>

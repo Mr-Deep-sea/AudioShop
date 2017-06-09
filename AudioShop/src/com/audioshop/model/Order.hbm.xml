@@ -10,12 +10,10 @@
             <column name="id" length="32" />
             <generator class="assigned" />
         </id>
-        <property name="audioIds" type="java.lang.String">
-            <column name="audioIds" length="255"/>
-        </property>
-        <property name="numbers" type="java.lang.String">
-            <column name="numbers" length="255" />
-        </property>
+		<set name="orderItems" lazy="false" cascade="save-update">
+			<key column="order_id"/>
+			<one-to-many class="com.audioshop.model.OrderItem"/>
+		</set>
         <property name="state" type="java.lang.Integer">
             <column name="state" length="11" />
         </property>

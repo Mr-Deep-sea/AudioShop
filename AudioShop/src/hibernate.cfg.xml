@@ -23,6 +23,7 @@
 		<mapping resource="com/audioshop/model/BorrowRecordItem.hbm.xml" />
 		<mapping resource="com/audioshop/model/Category.hbm.xml" />
 		<mapping resource="com/audioshop/model/Order.hbm.xml" />
+		<mapping resource="com/audioshop/model/OrderItem.hbm.xml" />
 		<mapping resource="com/audioshop/model/ReservationRecord.hbm.xml" />
 		<mapping resource="com/audioshop/model/ReservationRecordItem.hbm.xml" />
 	</session-factory>

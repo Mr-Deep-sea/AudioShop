@@ -1,11 +1,12 @@
 package com.audioshop.model;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Order {
 private String id;
-private String audioIds;
-private String numbers;
+private Set<OrderItem> orderItems=new HashSet<OrderItem>();
 private int state;
 private Date orderDate;
 public String getId() {
@@ -14,18 +15,7 @@ public String getId() {
 public void setId(String id) {
 	this.id = id;
 }
-public String getAudioIds() {
-	return audioIds;
-}
-public void setAudioIds(String audioIds) {
-	this.audioIds = audioIds;
-}
-public String getNumbers() {
-	return numbers;
-}
-public void setNumbers(String numbers) {
-	this.numbers = numbers;
-}
+
 public int getState() {
 	return state;
 }
@@ -37,6 +27,12 @@ public Date getOrderDate() {
 }
 public void setOrderDate(Date orderDate) {
 	this.orderDate = orderDate;
+}
+public Set<OrderItem> getOrderItems() {
+	return orderItems;
+}
+public void setOrderItems(Set<OrderItem> orderItems) {
+	this.orderItems = orderItems;
 }
 
 }

@@ -28,5 +28,16 @@
 			</interceptor-ref>
 			<interceptor-ref name="defaultStack"/>
 		</action>
+		<!-- 后台登录Action -->
+		<action name="audioAdmin_*" class="audioAdminAction" method="{1}">
+			<result name="showAddAudio">/WEB-INF/admin/addAudio.jsp</result>
+			<result name="loginSuccess" type="redirect">/admin/home.jsp</result>
+			<result name="showMsg" >/msg.jsp</result>
+			
+			<!-- <interceptor-ref name="adminPrivilegeInterceptor">
+				<param name="excludeMethods">login</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"/> -->
+		</action>
 	</package>
 </struts>

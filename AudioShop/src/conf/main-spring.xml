@@ -32,6 +32,9 @@
     </bean>
     <bean id="workerAction" class="com.audioshop.action.WorkerAction">
     </bean>
+    <bean id="audioAdminAction" class="com.audioshop.action.AudioAdminAction">
+    </bean>
+    
     
     <!--  <bean id="userLoginData" class="model.UserLoginData"></bean>
     <bean id="commonReturnData" class="model.CommonReturnData"></bean> -->
