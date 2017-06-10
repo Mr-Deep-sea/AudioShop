@@ -10,11 +10,8 @@
             <column name="id" length="36" />
             <generator class="uuid" />
         </id>
-        <many-to-one name="user" lazy="false" class="com.audioshop.model.User" column="userId"/>
-      	<set name="borrowRecordItems" lazy="false" cascade="save-update">
-			<key column="borrowrecord_id"/>
-			<one-to-many class="com.audioshop.model.BorrowRecordItem"/>
-		</set>
+        <many-to-one name="user" lazy="false" class="com.audioshop.model.User" column="user_id"/>
+      	<many-to-one name="audio" lazy="false" class="com.audioshop.model.Audio" column="audio_id"/>
          <property name="borrowDate" type="java.util.Date">
             <column name="borrowDate"/>
         </property>

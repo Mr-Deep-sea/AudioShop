@@ -7,7 +7,10 @@ import java.util.Set;
 public class BorrowRecord {
 private String id;
 private User user;
-private Set<BorrowRecordItem> borrowRecordItems=new HashSet<BorrowRecordItem>();
+/*private String audioId;*/
+private Audio audio;
+
+private String number;
 private Date borrowDate;
 public String getId() {
 	return id;
@@ -21,11 +24,18 @@ public User getUser() {
 public void setUser(User user) {
 	this.user = user;
 }
-public Set<BorrowRecordItem> getBorrowRecordItems() {
-	return borrowRecordItems;
+
+public Audio getAudio() {
+	return audio;
 }
-public void setBorrowRecordItems(Set<BorrowRecordItem> borrowRecordItems) {
-	this.borrowRecordItems = borrowRecordItems;
+public void setAudio(Audio audio) {
+	this.audio = audio;
+}
+public String getNumber() {
+	return number;
+}
+public void setNumber(String number) {
+	this.number = number;
 }
 public Date getBorrowDate() {
 	return borrowDate;
