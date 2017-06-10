@@ -144,8 +144,8 @@ form button:hover {
 		<div class="containerchild">
 			<h1>请输入数量</h1>
 			<form class="form" method="POST" id="login_form" action="order_addOrderItem.action">
-				<input name="orderItem.audio.id" id="audioId" type="hidden"> <input
-					name="orderItem.number" type="text" placeholder="数量"
+				<input name="audioId" id="audioId" type="hidden"> <input
+					name="orderItemNumber" type="text" placeholder="数量"
 					onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
 					onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}">
 				<!-- <input name="userPassword" type="password" placeholder="password">-->
@@ -184,7 +184,7 @@ form button:hover {
 					<td>${audio.category.name}</td>
 					<td>${audio.otherItem}</td>
 					<td>${audio.stock}</td>
-					<td>预约数量${audio.reservation}</td>
+					<td>${audio.reservation}</td>
 					<td><div class="button-group">
 							<a class="button border-red" href="javascript:addOrderItem('${audio.id}')"><span
 								class="icon-circle-o"></span>订货</a>
