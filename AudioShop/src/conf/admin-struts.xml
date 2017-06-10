@@ -33,6 +33,7 @@
 			<result name="showAddAudio">/WEB-INF/admin/addAudio.jsp</result>
 			<result name="loginSuccess" type="redirect">/admin/home.jsp</result>
 			<result name="showMsg" >/msg.jsp</result>
+			<result name="showAllAudio" >/WEB-INF/admin/allAudio.jsp</result>
 			
 			<!-- <interceptor-ref name="adminPrivilegeInterceptor">
 				<param name="excludeMethods">login</param>

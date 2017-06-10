@@ -13,7 +13,7 @@ public class OrderDaoTest {
 		List<Order> orders;
 		orders=orderDao.findObjects();
 		for (OrderItem orderItem : orders.get(0).getOrderItems()) {
-			System.out.println(orderItem.getAudioId());
+			System.out.println(orderItem.getAudio().getName());
 		}
 	}
 }

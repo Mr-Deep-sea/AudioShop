@@ -13,9 +13,10 @@
         <property name="orderId" type="java.lang.String">
             <column name="order_id" length="255"/>
         </property>
-        <property name="audioId" type="java.lang.String">
+        <many-to-one name="audio" lazy="false" class="com.audioshop.model.Audio" column="audio_id"/>
+        <!-- <property name="audioId" type="java.lang.String">
             <column name="audio_id" length="255"/>
-        </property>
+        </property> -->
         <property name="number" type="java.lang.Integer">
             <column name="number"  />
         </property>
