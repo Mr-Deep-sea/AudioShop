@@ -11,10 +11,8 @@
             <generator class="assigned" />
         </id>
         <many-to-one name="user" lazy="false" class="com.audioshop.model.User" column="user_id"/>
-        <set name="reservationRecordItems" lazy="false" cascade="save-update">
-			<key column="reservationrecord_id"/>
-			<one-to-many class="com.audioshop.model.ReservationRecordItem"/>
-		</set>
+        <many-to-one name="audio" lazy="false" class="com.audioshop.model.Audio" column="audio_id" />
+         
         <property name="date" type="java.util.Date">
             <column name="reservationDate" />
         </property>

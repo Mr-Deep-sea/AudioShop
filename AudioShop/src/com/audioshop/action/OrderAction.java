@@ -67,7 +67,7 @@ public class OrderAction extends ActionSupport {
 		orderItem.setAudio(audio);
 		order.getOrderItems().add(orderItem);
 		
-/*		for (OrderItem orderItem1: order.getOrderItems()) {
+		/*for (OrderItem orderItem1: order.getOrderItems()) {
 			System.out.println(orderItem1.getNumber());
 		}*/
 		msg.setMsg("添加订单项成功！");
