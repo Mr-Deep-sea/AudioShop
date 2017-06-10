@@ -143,8 +143,8 @@ form button:hover {
 		<span id="close_all">×</span>
 		<div class="containerchild">
 			<h1>请输入数量</h1>
-			<form class="form" method="POST" id="login_form" action="/orderAdmin_">
-				<input name="orderItem.orderId" id="orderId" type="hidden"> <input
+			<form class="form" method="POST" id="login_form" action="order_addOrderItem.action">
+				<input name="orderItem.audio.id" id="audioId" type="hidden"> <input
 					name="orderItem.number" type="text" placeholder="数量"
 					onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
 					onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}">
@@ -207,16 +207,16 @@ form button:hover {
 						<div class="pagelist">
 							<c:if test="${pageResult.pageNo!=1}">
 								<a
-									href="${ pageContext.request.contextPath }/audioAdmin_showAudio.action?pageNo=1">首页</a>
+									href="${ pageContext.request.contextPath }/audio_showAudio.action?pageNo=1">首页</a>
 								<a
-									href="${ pageContext.request.contextPath }/audioAdmin_showAudio.action?pageNo=${ pageResult.pageNo-1}">上一页</a>
+									href="${ pageContext.request.contextPath }/audio_showAudio.action?pageNo=${ pageResult.pageNo-1}">上一页</a>
 
 							</c:if>
 							<c:if test="${pageResult.pageNo!=pageResult.totalPageCount}">
 								<a
-									href="${ pageContext.request.contextPath }/audioAdmin_showAudio.action?pageNo=${ pageResult.pageNo+1}">下一页</a>
+									href="${ pageContext.request.contextPath }/audio_showAudio.action?pageNo=${ pageResult.pageNo+1}">下一页</a>
 								<a
-									href="${ pageContext.request.contextPath }/audioAdmin_showAudio.action?pageNo=${ pageResult.totalPageCount}">尾页</a>
+									href="${ pageContext.request.contextPath }/audio_showAudio.action?pageNo=${ pageResult.totalPageCount}">尾页</a>
 							</c:if>
 						</div>
 					</td>
@@ -239,9 +239,9 @@ form button:hover {
 			}
 		}
 		function addOrderItem(id) {
-		alert(id);
-			var orderId = document.getElementById("orderId");
-			orderId.value = id;
+		//alert(id);
+			var audioId = document.getElementById("audioId");
+			audioId.value = id;
 			var mask = document.getElementById("mask");
 			var box = document.getElementById("box");
 			mask.style.display = "block";

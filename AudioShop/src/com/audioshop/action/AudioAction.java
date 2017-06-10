@@ -15,7 +15,7 @@ import com.audioshop.util.PageResult;
 import com.audioshop.util.QueryHelper;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class AudioAdminAction extends ActionSupport {
+public class AudioAction extends ActionSupport {
 	private Audio audio;
 	private Integer pageNo;
 	@Resource

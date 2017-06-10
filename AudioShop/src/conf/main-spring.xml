@@ -28,13 +28,10 @@
     </bean>
     <bean id="loginAction" class="com.audioshop.action.LoginAction">
     </bean>
-    <bean id="adminAction" class="com.audioshop.action.AdminAction">
+    <bean id="audioAction" class="com.audioshop.action.AudioAction">
     </bean>
-    <bean id="workerAction" class="com.audioshop.action.WorkerAction">
+    <bean id="orderAction" class="com.audioshop.action.OrderAction">
     </bean>
-    <bean id="audioAdminAction" class="com.audioshop.action.AudioAdminAction">
-    </bean>
-    
     
     <!--  <bean id="userLoginData" class="model.UserLoginData"></bean>
     <bean id="commonReturnData" class="model.CommonReturnData"></bean> -->

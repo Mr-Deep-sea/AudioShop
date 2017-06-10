@@ -18,22 +18,29 @@
 			<result name="login">/login.jsp</result>
 			<result name="loginFail">/admin/index.jsp</result>
 			<result name="adminLogin">/adminLogin.jsp</result>
+			<result name="showMsg" >/msg.jsp</result>
 		</global-results>	
 		<!-- 后台登录Action -->
-		<action name="admin_*" class="adminAction" method="{1}">
+		<!-- <action name="admin_*" class="adminAction" method="{1}">
 			<result name="loginFail">/admin/index.jsp</result>
 			<result name="loginSuccess" type="redirect">/admin/home.jsp</result>
 			<interceptor-ref name="adminPrivilegeInterceptor">
 				<param name="excludeMethods">login</param>
 			</interceptor-ref>
 			<interceptor-ref name="defaultStack"/>
-		</action>
-		<!-- 后台登录Action -->
-		<action name="audioAdmin_*" class="audioAdminAction" method="{1}">
+		</action> -->
+		<action name="audio_*" class="audioAction" method="{1}">
 			<result name="showAddAudio">/WEB-INF/admin/addAudio.jsp</result>
-			<result name="loginSuccess" type="redirect">/admin/home.jsp</result>
 			<result name="showMsg" >/msg.jsp</result>
 			<result name="showAllAudio" >/WEB-INF/admin/allAudio.jsp</result>
+			
+			<!-- <interceptor-ref name="adminPrivilegeInterceptor">
+				<param name="excludeMethods">login</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"/> -->
+		</action>
+		<action name="order_*" class="orderAction" method="{1}">
+			<result name="showAddAudio">/WEB-INF/admin/addAudio.jsp</result>
 			
 			<!-- <interceptor-ref name="adminPrivilegeInterceptor">
 				<param name="excludeMethods">login</param>

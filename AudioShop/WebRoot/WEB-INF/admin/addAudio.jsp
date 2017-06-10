@@ -22,7 +22,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div class="panel admin-panel">
   <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span>添加资料信息</strong></div>
   <div class="body-content">
-    <form method="post" class="form-x" action="audioAdmin_doAddAudio.action">  
+    <form method="post" class="form-x" action="audio_doAddAudio.action">  
       <div class="form-group">
         <div class="label">
           <label>资料名：</label>
