@@ -25,19 +25,19 @@ public class BorrowAction extends ActionSupport{
 	@Resource
 	private AudioService audioService;
 	
-	String audioID;	
-	public String getAudioID() {
+	int audioID;	
+	public int getAudioID() {
 		return audioID;
 	}
-	public void setAudioID(String audioID) {
+	public void setAudioID(int audioID) {
 		this.audioID = audioID;
 	}
 	
-	String userID;
-	public String getUserID() {
+	int userID;
+	public int getUserID() {
 		return userID;
 	}
-	public void setUserID(String userID) {
+	public void setUserID(int userID) {
 		this.userID = userID;
 	}
 	
@@ -53,7 +53,7 @@ public class BorrowAction extends ActionSupport{
 		}
 		
 		//Audio audio=audioService.findObjectById(audioID);
-		Audio audio=audioService.findObjectById("123");
+		Audio audio=audioService.findObjectById(123);
 		audioList.add(audio);
 		
 		ActionContext.getContext().getSession().put("audioList", audioList);
