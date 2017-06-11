@@ -35,7 +35,7 @@ public class ReservationAction extends ActionSupport{
 		
 		//获取SESSION
 		User user=new User();
-		user.setId("1");
+		user.setId(1);
 		
 		Audio audio=new Audio();		
 		//audio=audioServiceImpl.findObjectById(audioID);

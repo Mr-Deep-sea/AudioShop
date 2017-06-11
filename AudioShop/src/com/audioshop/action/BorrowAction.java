@@ -98,7 +98,7 @@ public class BorrowAction extends ActionSupport{
 			borrowRecord.setNumber(n.toString());
 			User user=new User();
 			//user.setId(userID);
-			user.setId("1");
+			user.setId(1);
 			borrowRecord.setUser(user);
 			borrowRecordService.save(borrowRecord);
 		}
