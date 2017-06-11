@@ -9,7 +9,6 @@ private String id;
 private User user;
 /*private String audioId;*/
 private Audio audio;
-
 private String number;
 private Date borrowDate;
 public String getId() {

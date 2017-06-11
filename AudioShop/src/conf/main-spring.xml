@@ -32,7 +32,11 @@
     </bean>
     <bean id="orderAction" class="com.audioshop.action.OrderAction">
     </bean>
-    
+    <bean id="reservationAction" class="com.audioshop.action.ReservationAction"> 
+    </bean>
+    <bean id="borrowAction" class="com.audioshop.action.BorrowAction">
+    </bean>
+
     <!--  <bean id="userLoginData" class="model.UserLoginData"></bean>
     <bean id="commonReturnData" class="model.CommonReturnData"></bean> -->
      <!-- 扫描service -->
