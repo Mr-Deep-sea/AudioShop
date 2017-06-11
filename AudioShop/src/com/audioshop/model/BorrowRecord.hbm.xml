@@ -15,5 +15,8 @@
          <property name="borrowDate" type="java.util.Date">
             <column name="borrowDate"/>
         </property>
+        <property name="number" type="java.lang.String">
+        	<column name="number"></column>
+        </property>
     </class>
 </hibernate-mapping>
