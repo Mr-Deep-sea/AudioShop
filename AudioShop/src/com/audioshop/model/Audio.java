@@ -1,7 +1,7 @@
 package com.audioshop.model;
 
 public class Audio {
-private String id;
+private Integer id;
 private String name;
 //类型
 private Category category;
@@ -11,10 +11,11 @@ private String otherItem;
 private Integer stock;
 //预约数量
 private int reservation;
-public String getId() {
+
+public Integer getId() {
 	return id;
 }
-public void setId(String id) {
+public void setId(Integer id) {
 	this.id = id;
 }
 public String getName() {

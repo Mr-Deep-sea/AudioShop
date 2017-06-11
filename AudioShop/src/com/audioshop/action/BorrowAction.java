@@ -68,7 +68,7 @@ public class BorrowAction extends ActionSupport{
 		Map<String, Object> session = ActionContext.getContext().getSession(); 
 		ArrayList<Audio> audioList=(ArrayList<Audio>)session.get("audioList");
 		
-		HashMap<String, Integer> audioMap=new HashMap<String, Integer>();	
+		HashMap<Integer, Integer> audioMap=new HashMap<Integer, Integer>();	
 		Iterator<Audio> iterator=audioList.iterator();	
 		while (iterator.hasNext()){
 			Audio audio=new Audio();
@@ -81,9 +81,9 @@ public class BorrowAction extends ActionSupport{
 			audioMap.put(audio.getId(), number);			
 		}
 		
-		Iterator<Map.Entry<String, Integer>> iterator2=audioMap.entrySet().iterator();
+		Iterator<Map.Entry<Integer, Integer>> iterator2=audioMap.entrySet().iterator();
 		while (iterator2.hasNext()){
-			Map.Entry<String, Integer> entry=(Map.Entry<String, Integer>)iterator2.next();
+			Map.Entry<Integer, Integer> entry=(Map.Entry<Integer, Integer>)iterator2.next();
 			Audio audio=audioService.findObjectById(entry.getKey());			
 			Integer n=entry.getValue();
 			
