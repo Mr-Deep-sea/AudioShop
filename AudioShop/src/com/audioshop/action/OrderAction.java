@@ -99,7 +99,8 @@ public class OrderAction extends ActionSupport {
 			return "showMsg";
 		}else{
 			orderService.save(order);
-			msg.setMsg("订单提交提交成功！");
+			ActionContext.getContext().getSession().put("order", null);
+			msg.setMsg("订单提交成功！");
 			msg.setState(1);
 			msg.setUrl("index.jsp");
 			ServletActionContext.getRequest().setAttribute("msg", msg);
