@@ -10,6 +10,12 @@
             <column name="id" length="36" />
             <generator class="uuid" />
         </id>
+        <property name="userId" type="java.lang.Integer" insert="false" update="false">
+        	<column name="user_id"></column>
+        </property>
+           <property name="audioId" type="java.lang.Integer" insert="false" update="false">
+        	<column name="audio_id"></column>
+        </property>
         <many-to-one name="user" lazy="false" class="com.audioshop.model.User" column="user_id"/>
       	<many-to-one name="audio" lazy="false" class="com.audioshop.model.Audio" column="audio_id"/>
          <property name="borrowDate" type="java.util.Date">
@@ -18,5 +24,7 @@
         <property name="number" type="java.lang.String">
         	<column name="number"></column>
         </property>
+     
+        
     </class>
 </hibernate-mapping>

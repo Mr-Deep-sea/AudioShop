@@ -28,25 +28,5 @@ public class LoginAction extends ActionSupport {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	@Override
-	public String execute() throws Exception {
-		try {
-			if(StringUtils.isEmpty(password)||StringUtils.isEmpty(phone)){
-				return "login";
-			}else{
-				List<User> users=userService.login(phone, password);
-				if(users!=null&&users.size()>0){
-					User user=users.get(0);
-					ActionContext actionContext=ActionContext.getContext();
-					actionContext.put("userName", user.getName());
-					actionContext.put("userPhone", user.getPhone());
-					return "success";
-				}
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-			return "login";
-		}
-		return "login";
-	}
+	
 }

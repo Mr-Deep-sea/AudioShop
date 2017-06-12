@@ -18,15 +18,49 @@
 			<result name="login">/login.jsp</result>
 			<result name="loginFail">/workerLogin.jsp</result> -->
 			<result name="workerLogin">/workerLogin.jsp</result>
+		<result name="showMsg" >/msg.jsp</result>
 		</global-results>	
-		<!-- 后台登录Action -->
-		<action name="worker_*" class="workerAction" method="{1}">
-			<!-- <result name="loginFail">/admin/index.jsp</result>
-			<result name="loginSuccess" type="redirect">/admin/home.jsp</result> -->
-			<interceptor-ref name="workerPrivilegeInterceptor">
-				<param name="excludeMethods">login</param>
+		
+		
+		<action name="borrow_*" class="borrowAction" method="{1}">
+		<result name="success">/WEB-INF/worker/borrowAudio.jsp</result>
+		<result name="error">/WEB-INF/worker/borrowAudio.jsp</result>
+		<result name="toBorrow">/WEB-INF/worker/borrowAudio.jsp</result>
+		<!-- <interceptor-ref name="workerPrivilegeInterceptor">
+			<param name="excludeMethods">login</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"/> -->
+		</action>
+		
+		<action name="buy_*" class="buyAction" method="{1}">
+		<result name="success">/WEB-INF/worker/buyAudio.jsp</result>
+		<result name="error">/WEB-INF/worker/buyAudio.jsp</result>
+		<result name="toBuy">/WEB-INF/worker/buyAudio.jsp</result>
+		<!-- <interceptor-ref name="workerPrivilegeInterceptor">
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"/> -->
+		</action>
+		
+		<action name="worker_*" class="userAction" method="{1}">
+		<result name="addVipSuccess">/WEB-INF/worker/addVip.jsp</result>
+		<result name="addVipError">/WEB-INF/worker/addVip.jsp</result>
+		<result name="addVip">/WEB-INF/worker/addVip.jsp</result>
+		<interceptor-ref name="workerPrivilegeInterceptor">
 			</interceptor-ref>
 			<interceptor-ref name="defaultStack"/>
 		</action>
+		<action name="workerAudio_*" class="audioAction" method="{1}">
+			<result name="allAudio">/WEB-INF/worker/allAudio.jsp</result>
+			<result name="changeAudioInfo">/WEB-INF/worker/changeAudioInfo.jsp</result>
+		
+		</action>
+		<action name="workerReturn_*" class="returnAction" method="{1}">
+			<result name="toReturn">/WEB-INF/worker/returnAudio.jsp</result>
+			<result name="success">/WEB-INF/worker/returnAudio.jsp</result>
+		<!-- 	<interceptor-ref name="workerPrivilegeInterceptor">
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"/> -->
+		</action>
+		
 	</package>
 </struts>

@@ -1,10 +1,14 @@
 package com.audioshop.action;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
 import javax.annotation.Resource;
 
+import org.apache.struts2.ServletActionContext;
+
+import com.audioshop.common.Msg;
 import com.audioshop.model.Audio;
 import com.audioshop.model.ReservationRecord;
 import com.audioshop.model.User;
@@ -21,25 +25,20 @@ public class ReservationAction extends ActionSupport{
 	@Resource
 	private ReservationRecordService reservationRecordService;
 	
-	int audioID;
-	
-	public int getAudioID() {
-		return audioID;
-	}
-
-	public void setAudioID(int audioID) {
-		this.audioID = audioID;
-	}
 
 	public String reservation(){
-		
+
+		Msg msg=new Msg();
 		//获取SESSION
-		User user=new User();
-		user.setId(1);
+		User user=(User)ActionContext.getContext().getSession().get("existCommonUser");
+		if(user==null){
+			return "commonLogin";
+		}
+		String audioIDString=ServletActionContext.getRequest().getParameter("audioID").toString();
+		int audioID=Integer.parseInt(audioIDString);
 		
 		Audio audio=new Audio();		
-		//audio=audioServiceImpl.findObjectById(audioID);
-		audio=audioService.findObjectById("123");
+		audio=audioService.findObjectById(audioID);
 		
 		ReservationRecord reservationRecord=new ReservationRecord();
 		reservationRecord.setUser(user);
@@ -48,12 +47,27 @@ public class ReservationAction extends ActionSupport{
 		reservationRecord.setId(IDTools.getId());		
 		if (audio.getStock()-audio.getReservation()>0) {
 			reservationRecordService.save(reservationRecord);
+			int reservation=audio.getReservation()+1;
+			audio.setReservation(reservation);
+			audioService.update(audio);
 		}
 		else{
-			return ERROR;
+			msg.setMsg("预约失败！");
+			 msg.setState(0);
+			 ServletActionContext.getRequest().setAttribute("msg", msg);
+			return "showMsg";
 		}
 		
-		return SUCCESS;
+		 List<Audio> allAudioList=audioService.findObjects();
+		 ServletActionContext.getRequest().setAttribute("allAudioList", allAudioList);
+		 
+		 
+		 
+		 msg.setMsg("预约成功！");
+		 msg.setState(0);
+		 ServletActionContext.getRequest().setAttribute("msg", msg);
+		return "showMsg";
+		
 	}
 		
 		

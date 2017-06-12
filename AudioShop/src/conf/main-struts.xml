@@ -22,6 +22,7 @@
 			<result name="login">/login.jsp</result>
 			<result name="loginFail">/workerLogin.jsp</result> -->
 			<result name="commonLogin">/login.jsp</result>
+			<result name="showMsg">/msg.jsp</result>
 		</global-results>	
 		
 		<!-- <action name="login_*" class="loginAction" method="{1}"> -->
@@ -31,6 +32,13 @@
 		<!-- <result name="registPage">/WEB-INF/jsp/regist.jsp</result> -->			
 		</action>
 		
+		<action name="user_*" class="com.audioshop.action.UserAction" method="{1}">
+		<result name="adminIndex">/WEB-INF/admin/index.jsp</result>
+		<result name="workerIndex">/WEB-INF/worker/index.jsp</result>
+		<result name="index" type="redirect">index.action</result>
+		<result name="commonIndex" type="redirect">index.action</result>
+		<!-- <result name="registPage">/WEB-INF/jsp/regist.jsp</result> -->			
+		</action>
 		
 		<action name="to_*" class="com.audioshop.action.Distribute" method="{1}">
 		<result name="addvip">/WEB-INF/worker/addVip.jsp</result>
@@ -38,20 +46,21 @@
 		<!-- <result name="registPage">/WEB-INF/jsp/regist.jsp</result> -->		
 		</action>
 		
+		<action name="vip_*" class="audioAction" method="{1}">
+			<result name="toVipShowAudio" >/WEB-INF/VIP/allAudio.jsp</result>
+			<interceptor-ref name="commLoginPrivilegeInterceptor">
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"/>
+		</action>
 		
 		<action name="reservation_*" class="reservationAction" method="{1}">
 		<result name="success">/WEB-INF/VIP/allAudio.jsp</result>
 		<result name="error">/login.jsp</result>
-		<!-- <result name="registPage">/WEB-INF/jsp/regist.jsp</result> -->
-			
+		<result name="showMsg">/msg.jsp</result>
+		<result name="commonLogin">/login.jsp</result>
 		</action>
-		
-		
-		<action name="borrow_*" class="borrowAction" method="{1}">
-		<result name="success">/WEB-INF/worker/borrowAudio.jsp</result>
-		<result name="error">/login.jsp</result>
-		<!-- <result name="registPage">/WEB-INF/jsp/regist.jsp</result> -->
-			
+		<action name="index" class="indexAction" >
+		<result name="success">/index.jsp</result>
 		</action>
 	
 	</package>

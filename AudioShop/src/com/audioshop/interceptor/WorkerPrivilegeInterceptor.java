@@ -11,8 +11,8 @@ public class WorkerPrivilegeInterceptor extends MethodFilterInterceptor {
 	@Override
 	protected String doIntercept(ActionInvocation actionInvocation)  {
 		try {
-			User workerUser = (User) ServletActionContext.getRequest()
-					.getSession().getAttribute("existWorker");
+			User workerUser = (User)actionInvocation.getInvocationContext()
+					.getSession().get("existWorker");
 			if(workerUser != null){
 				return actionInvocation.invoke();
 			}else{
@@ -25,5 +25,11 @@ public class WorkerPrivilegeInterceptor extends MethodFilterInterceptor {
 			// TODO: handle exception
 			return "workerLogin";
 		}
+		
+	}
+	@Override
+	public String intercept(ActionInvocation invocation) throws Exception {
+		// TODO Auto-generated method stub
+		return super.intercept(invocation);
 	}
 }

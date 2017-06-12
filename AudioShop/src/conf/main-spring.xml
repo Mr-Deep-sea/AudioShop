@@ -36,7 +36,10 @@
     </bean>
     <bean id="borrowAction" class="com.audioshop.action.BorrowAction">
     </bean>
-
+    <bean id="buyAction" class="com.audioshop.action.BuyAction"></bean>
+    <bean id="userAction" class="com.audioshop.action.UserAction"></bean>
+ 	<bean id="returnAction" class="com.audioshop.action.ReturnAction"></bean>
+ 	<bean id="indexAction" class="com.audioshop.action.IndexAction"></bean>
     <!--  <bean id="userLoginData" class="model.UserLoginData"></bean>
     <bean id="commonReturnData" class="model.CommonReturnData"></bean> -->
      <!-- 扫描service -->

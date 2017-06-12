@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="renderer" content="webkit">
-    <title>Admin登录</title>  
+    <title>管理员登录</title>  
     <link rel="stylesheet" href="static/css/pintuer.css">
     <link rel="stylesheet" href="static/css/admin.css">
     <script src="static/js/jquery.js"></script>
@@ -20,20 +20,20 @@
             <div style="height:150px;"></div>
             <div class="media media-y margin-big-bottom">           
             </div>         
-            <form action="login.action" method="post">
-            <input type="hidden"  name="author" value="3" />
+            <form action="user_login.action" method="post">
             <div class="panel loginbox">
-                <div class="text-center margin-big padding-big-top"><h1>登录</h1></div>
+                <div class="text-center margin-big padding-big-top"><h1>管理员登录</h1></div>
                 <div class="panel-body" style="padding:30px; padding-bottom:10px; padding-top:10px;">
                     <div class="form-group">
                         <div class="field field-icon-right">
-                            <input type="text" class="input input-big" name="phone" placeholder="登录账号" data-validate="required:请填写账号" />
+                            <input type="hidden" name="user.author" value="3" />
+                            <input type="text" class="input input-big" name="user.name" placeholder="登录账号" data-validate="required:请填写账号" />
                             <span class="icon icon-user margin-small"></span>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="field field-icon-right">
-                            <input type="password" class="input input-big" name="password" placeholder="登录密码" data-validate="required:请填写密码" />
+                            <input type="password" class="input input-big" name="user.password" placeholder="登录密码" data-validate="required:请填写密码" />
                             <span class="icon icon-key margin-small"></span>
                         </div>
                     </div>

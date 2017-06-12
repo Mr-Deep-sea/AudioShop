@@ -16,5 +16,11 @@
         <property name="date" type="java.util.Date">
             <column name="reservationDate" />
         </property>
+        <property name="user_id" type="java.lang.Integer" insert="false" update="false">
+        	<column name="user_id"></column>
+        </property>
+        <property name="audio_id" type="java.lang.Integer" insert="false" update="false">
+        	<column name="audio_id"></column>
+        </property>
     </class>
 </hibernate-mapping>

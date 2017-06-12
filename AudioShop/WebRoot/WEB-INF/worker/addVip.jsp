@@ -5,177 +5,61 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 %>
 
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="renderer" content="webkit">
-    <title>网站信息</title>  
-    <link rel="stylesheet" href="static/css/pintuer.css">
-    <link rel="stylesheet" href="static/css/admin.css">
-    <script src="static/js/jquery.js"></script>
-    <script src="static/js/pintuer.js"></script>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="static/css/pintuer.css">
+  <link rel="stylesheet" href="static/css/admin.css">
+  <script src="static/js/jquery.js"></script>
+  <script src="static/js/pintuer.js"></script>
 </head>
 <body>
-<div class="panel admin-panel">
-  <div class="panel-head"><strong><span class="icon-pencil-square-o"></span> 网站信息</strong></div>
+<div class="panel admin-panel margin-top" id="add">
+  <div class="panel-head"><strong><span class="icon-pencil-square-o"></span> Vip办理</strong></div>
   <div class="body-content">
-    <form method="post" class="form-x" action="">
+    <form method="post" class="form-x" action="worker_addVip.action">
       <div class="form-group">
         <div class="label">
-          <label>网站标题：</label>
+          <label>姓名：</label>
         </div>
         <div class="field">
-          <input type="text" class="input" name="stitle" value="" />
+          <input type="text" class="input w50" value="" name="user.name" data-validate="required:请输入用户姓名" />
           <div class="tips"></div>
         </div>
       </div>
-      <div class="form-group">
-        <div class="label">
-          <label>网站LOGO：</label>
-        </div>
-        <div class="field">
-          <input type="text" id="url1" name="slogo" class="input tips" style="width:25%; float:left;" value="" data-toggle="hover" data-place="right" data-image=""  />
-          <input type="button" class="button bg-blue margin-left" id="image1" value="+ 浏览上传" >
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="label">
-          <label>网站域名：</label>
-        </div>
-        <div class="field">
-          <input type="text" class="input" name="surl" value="" />
-        </div>
-      </div>
-      <div class="form-group" style="display:none">
-        <div class="label">
-          <label>副加标题：</label>
-        </div>
-        <div class="field">
-          <input type="text" class="input" name="sentitle" value="" />
-          <div class="tips"></div>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="label">
-          <label>网站关键字：</label>
-        </div>
-        <div class="field">
-          <textarea class="input" name="skeywords" style="height:80px"></textarea>
-          <div class="tips"></div>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="label">
-          <label>网站描述：</label>
-        </div>
-        <div class="field">
-          <textarea class="input" name="sdescription"></textarea>
-          <div class="tips"></div>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="label">
-          <label>联系人：</label>
-        </div>
-        <div class="field">
-          <input type="text" class="input" name="s_name" value="" />
-          <div class="tips"></div>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="label">
-          <label>手机：</label>
-        </div>
-        <div class="field">
-          <input type="text" class="input" name="s_phone" value="" />
-          <div class="tips"></div>
-        </div>
-      </div>
+  
       <div class="form-group">
         <div class="label">
           <label>电话：</label>
         </div>
         <div class="field">
-          <input type="text" class="input" name="s_tel" value="" />
+          <input type="text" class="input w50" value="" name="user.phone" data-validate="required:请输入用户电话号码" />
           <div class="tips"></div>
         </div>
-      </div>
-      <div class="form-group" style="display:none;">
-        <div class="label">
-          <label>400电话：</label>
-        </div>
-        <div class="field">
-          <input type="text" class="input" name="s_400" value="" />
-          <div class="tips"></div>
-        </div>
-      </div>
+      </div> 
+      
       <div class="form-group">
         <div class="label">
-          <label>传真：</label>
+          <label>密码：</label>
         </div>
         <div class="field">
-          <input type="text" class="input" name="s_fax" value="" />
+          <input type="text" class="input w50" value="" name="user.password" data-validate="required:请输入用户登陆密码" />
           <div class="tips"></div>
         </div>
       </div>
-      <div class="form-group">
-        <div class="label">
-          <label>QQ：</label>
-        </div>
-        <div class="field">
-          <input type="text" class="input" name="s_qq" value="" />
-          <div class="tips"></div>
-        </div>
-      </div>
-      <div class="form-group" style="display:none">
-        <div class="label">
-          <label>QQ群：</label>
-        </div>
-        <div class="field">
-          <input type="text" class="input" name="s_qqu" value="" />
-          <div class="tips"></div>
-        </div>
-      </div>
-     
-      <div class="form-group">
-        <div class="label">
-          <label>Email：</label>
-        </div>
-        <div class="field">
-          <input type="text" class="input" name="s_email" value="" />
-          <div class="tips"></div>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="label">
-          <label>地址：</label>
-        </div>
-        <div class="field">
-          <input type="text" class="input" name="s_address" value="" />
-          <div class="tips"></div>
-        </div>
-      </div>  
-              
-      <div class="form-group">
-        <div class="label">
-          <label>底部信息：</label>
-        </div>
-        <div class="field">
-          <textarea name="scopyright" class="input" style="height:120px;"></textarea>
-          <div class="tips"></div>
-        </div>
-      </div>
+      
       <div class="form-group">
         <div class="label">
           <label></label>
         </div>
         <div class="field">
-          <button class="button bg-main icon-check-square-o" type="submit"> 提交</button>
+          <button class="button bg-main icon-check-square-o" type="submit">添加</button>
         </div>
       </div>
+      
     </form>
   </div>
 </div>
-</body></html>
+</body>
+</html>

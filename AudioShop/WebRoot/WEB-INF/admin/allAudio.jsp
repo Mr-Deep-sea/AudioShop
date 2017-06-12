@@ -158,6 +158,7 @@ form button:hover {
 		<div class="panel admin-panel">
 			<div class="panel-head">
 				<strong class="icon-reorder">资料列表</strong>
+				<div class="button-group"> <a class="button border-green" href="order_currentOrder.action" ><span class="icon-circle-o"></span>查看订单</a> </div>
 			</div>
 			<!-- <div class="padding border-bottom">
       <ul class="search">

@@ -7,13 +7,24 @@ import java.util.Set;
 public class BorrowRecord {
 private String id;
 private User user;
-/*private String audioId;*/
+private Integer audioId;
+private Integer userId;
 private Audio audio;
 private String number;
 private Date borrowDate;
+
 public String getId() {
 	return id;
 }
+
+public Integer getAudioId() {
+	return audioId;
+}
+
+public void setAudioId(Integer audioId) {
+	this.audioId = audioId;
+}
+
 public void setId(String id) {
 	this.id = id;
 }
@@ -29,6 +40,12 @@ public Audio getAudio() {
 }
 public void setAudio(Audio audio) {
 	this.audio = audio;
+}
+public Integer getUserId() {
+	return userId;
+}
+public void setUserId(Integer userId) {
+	this.userId = userId;
 }
 public String getNumber() {
 	return number;

@@ -22,17 +22,21 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements
 		this.userDao = userDao;
 	}
 
-	@Override
-	public List<User> login(String phone, String password) {
-		return userDao.login(phone, password);
-	}
 
+	@Override
+	public List<User> login(String name, String password,int author) {
+		return userDao.login(name, password, author);
+	}
 	
 	@Override
 	public List<User> findUsersByPhone(String phone) {
 		return userDao.findUsersByPhone(phone);
 	}
 
-
+	@Override
+	public int findUserByName(String name) {
+		// TODO Auto-generated method stub
+		return userDao.findUserByName(name);
+	}
 
 }

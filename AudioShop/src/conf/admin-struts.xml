@@ -46,6 +46,24 @@
 				<param name="excludeMethods">login</param>
 			</interceptor-ref>
 			<interceptor-ref name="defaultStack"/> -->
+			<result name="currentOrder">/WEB-INF/admin/currentOrder.jsp</result>
+			<result name="allOrder">/WEB-INF/admin/allOrder.jsp</result>
+			<result name="orderDetail">/WEB-INF/admin/orderDetail.jsp</result>
+			<!-- <interceptor-ref name="adminPrivilegeInterceptor">
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"/> -->
 		</action>
+		
+		<action name="admin_*" class="userAction" method="{1}">
+			<result name="ADDERROR">/WEB-INF/admin/addWorker.jsp</result>
+			<result name="FINDSUCCESS">/WEB-INF/admin/allWorker.jsp</result>
+			<result name="FINDERROR">/WEB-INF/admin/allWorker.jsp</result>
+			<result name="addWorker">/WEB-INF/admin/addWorker.jsp</result>
+			<result name="showMsg" >/msg.jsp</result>
+			<!-- <interceptor-ref name="adminPrivilegeInterceptor">
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"/> -->
+		</action>
+		
 	</package>
 </struts>
