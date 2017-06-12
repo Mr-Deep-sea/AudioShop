@@ -21,7 +21,6 @@ import com.audioshop.service.OrderService;
 import com.audioshop.util.IDTools;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
-import com.sun.org.apache.regexp.internal.recompile;
 
 public class OrderAction extends ActionSupport {
 	private Integer audioId;
@@ -144,11 +143,11 @@ public class OrderAction extends ActionSupport {
 			while (iterator.hasNext()){
 				Map.Entry<String, OrderItem> entry=(Map.Entry<String, OrderItem>)iterator.next();
 				OrderItem orderItem=entry.getValue();
-				//orderItem.setOrderId(order.getId());
 				order.getOrderItems().add(orderItem);
 				}
 			orderService.save(order);
-			ActionContext.getContext().getSession().put("order", null);
+			ActionContext.getContext().getSession().put("sessionOrder", null);
+			ActionContext.getContext().getSession().put("orderItems", null);
 			msg.setMsg("订单提交成功！");
 			msg.setState(1);
 			msg.setUrl("order_allOrder.action");
@@ -169,8 +168,7 @@ public class OrderAction extends ActionSupport {
 			ServletActionContext.getRequest().setAttribute("msg", msg);
 			return "showMsg";
 		} else {
-			ServletActionContext.getRequest().setAttribute("currentOrder",
-					order);
+			
 			ServletActionContext.getRequest().setAttribute("orderItems",
 					orderItems);
 			return "currentOrder";

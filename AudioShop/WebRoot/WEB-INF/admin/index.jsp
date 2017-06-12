@@ -22,21 +22,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <div class="logo margin-big-left fadein-top">
     <h1><img src="static/images/y.jpg" class="radius-circle rotate-hover" height="50" alt="" />店主管理中心</h1>
   </div>
-    <div class="head-l">
+   <div class="head-l">
   <c:choose>
 	<c:when test="${empty existCommonUser}">
-		<a href="login.jsp" class="button button-little bg-green" target="_blank"><span class="icon-home"></span> VIP用户登录</a> &nbsp;&nbsp;
+		<a href="login.jsp" class="button button-little bg-green" ><span class="icon-home"></span> VIP用户登录</a> &nbsp;&nbsp;
 	</c:when>
 	<c:otherwise>
-		<a href="user_logout.action?user.author=1" class="button button-little bg-green" target="_blank"><span class="icon-home"></span> VIP用户登出</a> &nbsp;&nbsp;	
+		<a href="user_logout.action?user.author=1" class="button button-little bg-green" ><span class="icon-home"></span> VIP用户登出</a> &nbsp;&nbsp;	
 	</c:otherwise>
   </c:choose>
   <c:choose>
 	<c:when test="${empty existWorker}">
-		<a href="workerLogin.jsp" class="button button-little bg-green" target="_blank"><span class="icon-home"></span> 收银员登录</a> &nbsp;&nbsp;
+		<a href="workerLogin.jsp" class="button button-little bg-green" ><span class="icon-home"></span> 收银员登录</a> &nbsp;&nbsp;
 	</c:when>
 	<c:otherwise>
-		<a href="user_logout.action?user.author=2" class="button button-little bg-green" target="_blank"><span class="icon-home"></span> 收银员登出</a> &nbsp;&nbsp;	
+		<a href="user_logout.action?user.author=2" class="button button-little bg-green" ><span class="icon-home"></span> 收银员登出</a> &nbsp;&nbsp;	
 	</c:otherwise>
   </c:choose>
   <c:choose>
@@ -44,7 +44,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<a  href="adminLogin.jsp" class="button button-little bg-red"><span class="icon-power-off"></span> 管理员登录</a>
     </c:when>
 	<c:otherwise>
-		<a href="user_logout.action?user.author=3" class="button button-little bg-green" target="_blank"><span class="icon-home"></span> 管理员登出</a> &nbsp;&nbsp;	
+		<a href="user_logout.action?user.author=3" class="button button-little bg-green" ><span class="icon-home"></span> 管理员登出</a> &nbsp;&nbsp;	
 	</c:otherwise>
   </c:choose>
  </div>

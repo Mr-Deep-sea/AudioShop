@@ -166,7 +166,14 @@ form button:hover {
 					<%-- <c:forEach var="audio" items="${audios}" varStatus="status"> --%>
 					<td>${order.id}</td>
 					<td>${order.orderDate}</td>
-					<td>${order.state}</td>
+					  <c:choose>
+						<c:when test="${order.state==1}">
+							<td>已完成</td>
+						</c:when>
+						<c:otherwise>
+							<td>订货中</td>
+						</c:otherwise>
+  					   </c:choose>
 					<td><div class="button-group">
 							<a class="button border-red" href="order_orderDetail.action?orderId=${order.id}"><span
 								class="icon-circle-o"></span>查看订单详情</a>
